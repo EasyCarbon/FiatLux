@@ -1,7 +1,7 @@
 //Components
 //-
-
 //Errors
+export const SET_ALERT_ALL = "SET_ALERT_ALL";
 export const SET_ALERT_ERROR = "SET_ALERT_ERROR";
 export const SET_ALERT_WARNING = "SET_ALERT_WARNING";
 export const SET_ALERT_INFO = "SET_ALERT_INFO";

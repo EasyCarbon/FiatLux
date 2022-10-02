@@ -1,7 +1,7 @@
-import { Alert, AlertIcon, CloseButton, Stack } from "@chakra-ui/react";
+import { Alert, AlertIcon, Box, CloseButton, Stack } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAlertError, setAlertInfo, setAlertSuccess, setAlertWarning } from "../actions/alertActions";
+import { setAlertAll, setAlertError, setAlertInfo, setAlertSuccess, setAlertWarning } from "../actions/alertActions";
 
 export default function Alerts() {
     let alerts = useSelector((state: any) => state.alerts)
@@ -16,55 +16,33 @@ export default function Alerts() {
         }, 1000 * 3);
     }, [alerts])
 
+    function AlertModal({ status, rKey, source, close }) {
+        return <Alert w='100%'
+            justifyContent='space-between' status={status} variant='solid'>
+            <AlertIcon />
+            {source[rKey]}
+            <CloseButton
+                onClick={() => {
+                    const { [rKey]: _, ...newObj } = source;
+                    dispatch(close(newObj))
+                }
+                }
+            />
+        </Alert>
+    }
 
+    function MapAlerts() {
+        return <Box>{Object.keys(alerts).map((key, index) => {
+            let status: any = key
+            if (alerts[key]) return <AlertModal key={index} source={alerts}
+                rKey={key} status={status} close={setAlertAll} />
+        })}</Box>
+    }
+
+    let renderCon = alerts.warning || alerts.info || alerts.success || alerts.error
     return (
-        <Stack spacing='-1' w='100%' /* position='absolute' top='0' zIndex={4} */>
-            {alerts.error && <Alert w='100%' justifyContent='space-between' status='error' variant='solid'>
-                <AlertIcon />
-                {alerts.error}
-                <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
-                    right={-1}
-                    top={-1}
-                    onClick={() => dispatch(setAlertError(null))}
-                />
-            </Alert>}
-
-            {alerts.success && <Alert w='100%' justifyContent='space-between' status='success' variant='solid'>
-                <AlertIcon />
-                {alerts.success}
-                <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
-                    right={-1}
-                    top={-1}
-                    onClick={() => dispatch(setAlertSuccess(null))}
-                />
-            </Alert>}
-
-            {alerts.warning && <Alert w='100%' justifyContent='space-between' status='warning' variant='solid'>
-                <AlertIcon />
-                {alerts.warning}
-                <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
-                    right={-1}
-                    top={-1}
-                    onClick={() => dispatch(setAlertWarning(null))}
-                />
-            </Alert>}
-
-            {alerts.info && <Alert w='100%' justifyContent='space-between' status='info' variant='solid'>
-                <AlertIcon />
-                {alerts.info}
-                <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
-                    right={-1}
-                    top={-1}
-                    onClick={() => dispatch(setAlertInfo(null))}
-                />
-            </Alert>}
-        </Stack>)
+            <Stack display={!renderCon && 'none'} spacing='-1' position={'sticky'} zIndex={'4'} top='0' w='100%'>
+                <MapAlerts />
+            </Stack>
+    )
 }

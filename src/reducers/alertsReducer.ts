@@ -1,4 +1,4 @@
-import { SET_ALERT_ERROR, SET_ALERT_INFO, SET_ALERT_SUCCESS, SET_ALERT_WARNING } from '../actions/types'
+import { SET_ALERT_ALL, SET_ALERT_ERROR, SET_ALERT_INFO, SET_ALERT_SUCCESS, SET_ALERT_WARNING } from '../actions/types'
 
 const initialState: any = {
   error: null,
@@ -9,6 +9,8 @@ const initialState: any = {
 
 export default function alertsReducer(state = initialState, action: any) {
   switch (action.type) {
+    case SET_ALERT_ALL:
+      return action.payload
     case SET_ALERT_ERROR:
       return {
         ...state,

@@ -1,5 +1,3 @@
-import { validAvalancheChains } from '../utils/Constants'
-import { setAlertWarning } from './alertActions'
 import {
   ACCOUNTS_ERROR,
   ACCOUNTS_FETCHED,

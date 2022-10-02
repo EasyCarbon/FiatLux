@@ -1,7 +1,9 @@
 import { Badge, Box, Button, Divider, Heading, HStack, Image, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, Stack, Stat, StatHelpText, StatLabel, StatNumber, Tag, Text, Wrap } from "@chakra-ui/react";
 import { useState } from "react";
+import { useFiatluxContext } from "../context/fiatluxContext";
 
 export default function MintModal(props: any) {
+    const { mintNft } = useFiatluxContext()
     const parse = (val) => val.replace(/^\$/, '')
     const [amount, setAmount] = useState(1)
     return (
@@ -33,7 +35,7 @@ export default function MintModal(props: any) {
                             <NumberDecrementStepper />
                         </NumberInputStepper>
                     </NumberInput>
-                    <Button children='Mint' disabled={amount <= 0} />
+                    <Button children='Mint' disabled={amount <= 0} onClick={() => mintNft({amount})} />
                 </HStack>
             </Stack>
         </Tag>

@@ -1,4 +1,11 @@
-import { SET_ALERT_ERROR, SET_ALERT_INFO, SET_ALERT_SUCCESS, SET_ALERT_WARNING } from "./types";
+import { SET_ALERT_ALL, SET_ALERT_ERROR, SET_ALERT_INFO, SET_ALERT_SUCCESS, SET_ALERT_WARNING } from "./types";
+
+export function setAlertAll(p: String) {
+    return {
+        type: SET_ALERT_ALL,
+        payload: p
+    };
+};
 
 export function setAlertError(p: Object) {
     return {
