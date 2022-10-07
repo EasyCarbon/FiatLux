@@ -1,4 +1,4 @@
-# Getting Started with Virtual POS
+# Getting Started with Fiat Lux (Public Mint Page)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
