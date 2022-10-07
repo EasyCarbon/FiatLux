@@ -2,6 +2,7 @@
   "name": "fiatlux-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/EasyCarbon/FiatLux",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.3",
     "@chakra-ui/react": "^2.2.3",

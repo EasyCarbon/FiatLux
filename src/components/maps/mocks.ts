@@ -1,13 +1,13 @@
 export const MINT_ITEMS = [
     {
-        "description": "Fiat Lux NFT by EasyCarbon",
-        "image": "https://www.realwire.com/writeitfiles/trees1.jpg",
+        "description": "Forest Fire Relief Efforts",
+        "image": "https://i.ibb.co/0n6fFML/false-color.gif",
         "retirement-id": "QmR24FNPFG4fY5oWkHBk5VVarSWaS7mtvutLPM3RTn6pDJ",
-        "name": "Fiat Lux NFT",
+        "name": "Datça, Muğla",
         "attributes": [
             {
                 "trait_type": "Fire Index",
-                "value": "0"
+                "value": "1"
             },
             {
                 "trait_type": "Logging Index",
@@ -15,17 +15,59 @@ export const MINT_ITEMS = [
             },
             {
                 "trait_type": "Water Index",
-                "value": "1"
+                "value": "0"
             }
         ],
         "limit": "1"
-    }
+    },
+    {
+        "description": "Forest Fire Relief Efforts",
+        "image": "https://i.ibb.co/0n6fFML/false-color.gif",
+        "retirement-id": "QmR24FNPFG4fY5oWkHBk5VVarSWaS7mtvutLPM3RTn6pDJ",
+        "name": "Akyaka, Muğla",
+        "attributes": [
+            {
+                "trait_type": "Fire Index",
+                "value": "1"
+            },
+            {
+                "trait_type": "Logging Index",
+                "value": "0"
+            },
+            {
+                "trait_type": "Water Index",
+                "value": "0"
+            }
+        ],
+        "limit": "1"
+    },
+    {
+        "description": "Forest Fire Relief Efforts",
+        "image": "https://i.ibb.co/TT43Hcb/S2-L2-A-741553085525711-timelapse.gif",
+        "retirement-id": "QmR24FNPFG4fY5oWkHBk5VVarSWaS7mtvutLPM3RTn6pDJ",
+        "name": "Manavgat, Antalya",
+        "attributes": [
+            {
+                "trait_type": "Fire Index",
+                "value": "1"
+            },
+            {
+                "trait_type": "Logging Index",
+                "value": "0"
+            },
+            {
+                "trait_type": "Water Index",
+                "value": "0"
+            }
+        ],
+        "limit": "1"
+    },
 ];
 
 export const MINTED_ITEMS = [
     {
         "description": "Fiat Lux NFT by EasyCarbon",
-        "image": "https://www.realwire.com/writeitfiles/trees1.jpg",
+        "image": "https://i.ibb.co/0n6fFML/false-color.gif",
         "retirement-id": "QmR24FNPFG4fY5oWkHBk5VVarSWaS7mtvutLPM3RTn6pDJ",
         "name": "Fiat Lux NFT",
         "attributes": [

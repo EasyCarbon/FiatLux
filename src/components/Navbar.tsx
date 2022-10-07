@@ -1,5 +1,5 @@
 import { Box, Flex, Text, IconButton, Collapse, Link, useDisclosure, Button, useColorMode, Icon, useColorModeValue } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, EditIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, EditIcon, AtSignIcon } from '@chakra-ui/icons';
 import { ReceiptIcon, ViewIcon } from './';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
@@ -33,6 +33,10 @@ export default function Navbar({ path }: any) {
           <Link href='#/minted' color={path === '/minted' && 'blue.300'} bg={`rgba(255, 255, 255, ${path === '/minted' ? '0.8' : '0.08'})`} p={2} pr={2}borderRadius='1rem'>
             <ViewIcon h='6' w='6' />
             <Text fontSize='xs'>minted</Text>
+          </Link>
+          <Link href='#/map' color={path === '/map' && 'blue.300'} bg={`rgba(255, 255, 255, ${path === '/map' ? '0.8' : '0.08'})`} p={2} pr={2}borderRadius='1rem'>
+          <Icon as={AtSignIcon} h='6' w='6' />
+            <Text fontSize='xs'>map</Text>
           </Link>
           {/* <Link href='#/history' color={path === '/history' ? 'blue.300' : 'white'}>
             <ReceiptIcon h='6' w='6' />
