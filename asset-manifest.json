@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/EasyCarbon/FiatLux/static/css/main.36e40dcc.css",
+    "main.js": "/EasyCarbon/FiatLux/static/js/main.84e9ee42.js",
+    "static/js/787.7cb05210.chunk.js": "/EasyCarbon/FiatLux/static/js/787.7cb05210.chunk.js",
+    "static/media/logo.png": "/EasyCarbon/FiatLux/static/media/logo.b41e0315cc65971f405e.png",
+    "index.html": "/EasyCarbon/FiatLux/index.html",
+    "main.36e40dcc.css.map": "/EasyCarbon/FiatLux/static/css/main.36e40dcc.css.map",
+    "main.84e9ee42.js.map": "/EasyCarbon/FiatLux/static/js/main.84e9ee42.js.map",
+    "787.7cb05210.chunk.js.map": "/EasyCarbon/FiatLux/static/js/787.7cb05210.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36e40dcc.css",
+    "static/js/main.84e9ee42.js"
+  ]
+}
