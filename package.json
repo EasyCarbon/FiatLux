@@ -2,7 +2,7 @@
   "name": "fiatlux-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/EasyCarbon/FiatLux",
+  
   "dependencies": {
     "@chakra-ui/icons": "^2.0.3",
     "@chakra-ui/react": "^2.2.3",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
