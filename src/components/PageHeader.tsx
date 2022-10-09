@@ -12,7 +12,7 @@ export default function ViewHeader({ path, styleProps }: any) {
             <Flex align={'center'} gap={3}>
                 <img src={logo} style={{ height: '40px', width: '40px' }} />
                 <Heading fontSize='xl'>{
-                    path === '/' ? 'Mint' : firstLetterToUpper(path)
+                    path === '/' ? 'Fiat Lux' : firstLetterToUpper(path)
                 }</Heading>
             </Flex>
             {comp.devMode ? <Text fontSize='sm'> Mock {account && account.slice(0, 4) + '...' + account.slice(-4)} </Text> : <MetaConnect />}
